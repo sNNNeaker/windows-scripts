@@ -1,0 +1,1 @@
+\\<sophos-server>\SophosUpdate\CIDs\S000\SAVSCFXP\Setup.exe /User:<domain>\<user> <password> -updp "\\av1\SophosUpdate\CIDs\S000\SAVSCFXP" -user "<domain>\<user>" -pwd "<password>" -mng yes -G "\<sophos-server>\Installed"
