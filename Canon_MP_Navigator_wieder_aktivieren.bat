@@ -1,0 +1,1 @@
+del "%appdata%\Microsoft\Windows\Network Shortcuts\Eigene Websites auf MSN.lnk"

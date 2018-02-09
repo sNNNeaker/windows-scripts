@@ -1,0 +1,54 @@
+<html>
+  <head>
+	<title>Shutdown</title>
+		<HTA:APPLICATION
+			APPLICATIONNAME="Shutdown"
+			SCROLL="no"
+			SINGLEINSTANCE="yes"
+			WINDOWSTATE="maximize"
+			SysMenu="no"
+			Border="thin"
+		>
+		<link rel="stylesheet" type="text/css" href="css.css">
+		<script language="VBScript">
+			Sub RunProgram
+			Set objShell = CreateObject("Wscript.Shell")
+			objShell.Run "cmd.exe /C c:\shutdown\kill_shutdown.bat"
+			End Sub
+		</script>
+	<script type="text/javascript">
+		function startTime()
+		{
+			var today=new Date();
+			var h=today.getHours();
+			var m=today.getMinutes();
+			var s=today.getSeconds();
+			// add a zero in front of numbers<10
+			m=checkTime(m);
+			s=checkTime(s);
+			document.getElementById('time').innerHTML=h+":"+m+":"+s;
+			t=setTimeout('startTime()',500);
+		}
+		function checkTime(i)
+		{
+		if (i<10)
+		{
+			i="0" + i;
+		}
+			return i;
+		}
+	</script>
+  </head>
+<body onload="startTime()">
+	<br>
+	<div class="image_resize">
+		<img src="logo.jpg">
+	</div>
+	<div id="time"></div>
+	<br>
+	<div>Computer wird heruntergefahren in <span id="timer"></span>&nbsp;Minuten!</div>
+		<script type="text/javascript" src="js.js"></script>
+	<br>
+	<div><button onclick="RunProgram">Herunterfahren abbrechen!</button></div>
+</body>
+</html>
