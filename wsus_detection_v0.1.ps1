@@ -1,6 +1,6 @@
 ##############################################
 #
-#			Geuder AG WSUS Detection Script
+#			WSUS Detection Script
 #
 #			Author: pscholz@geuder.de
 #
