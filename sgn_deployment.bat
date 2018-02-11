@@ -2,9 +2,9 @@
 echo :: Install Pre-Req .net 4.52
 \\<SERVER>\SGN\NDP452-KB2901907-x86-x64-AllOS-ENU.exe /q /norestart /ChainingPackage FluoronGmbH
 echo :: Install Pre-Req vcredist
-\\<SERVER>.fluoron.local\SGN\vcredist_x86.exe /passive /norestart
+\\<SERVER>\SGN\vcredist_x86.exe /passive /norestart
 echo :: Install Pre-Req vcredist 14
-\\<SERVER>.fluoron.local\SGN\vcredist14_x86.exe /install /passive /norestart
+\\<SERVER>\SGN\vcredist14_x86.exe /install /passive /norestart
 echo :: Query 32/64 Bit
 if "%PROCESSOR_ARCHITECTURE%"=="AMD64" goto 64BIT
 
