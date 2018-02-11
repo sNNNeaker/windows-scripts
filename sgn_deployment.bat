@@ -10,7 +10,7 @@ if "%PROCESSOR_ARCHITECTURE%"=="AMD64" goto 64BIT
 
 :32BIT
 echo :: Install x86 Pre-Req
-\\Backup01.fluoron.local\SGN\SGxClientPreinstall_x86.msi
+\\<SERVER>\SGN\SGxClientPreinstall_x86.msi
 echo :: Install x86 Client
 msiexec.exe /i "\\<SERVER>\SGN\sgncient_x86.msi" ADDLOCAL=Client,CredentialProvider,BaseEncryption,SectorBasedEncryption OPALMODDE=2 /L* c:\sgnclient_%computername%.txt /qn
 GOTO END
