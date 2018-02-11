@@ -22,9 +22,9 @@ $WUServer = "WUServer"
 # Reg-Name for WU Status Server
 $WUStatusServer = "WUStatusServer"
 # Reg-Value for WU Server
-$local_value = "http://wsus.geuder.local:8530"
-# Reg-Value for WU Status Server
-$remote_value = "https://wsus.geuder.de"
+$local_value = "http://<server>:8530"
+# Reg-Value for Remote WU Server
+$remote_value = "https://<server>"
 # Current DNS Search Suffix
 $CurrentDomain = gwmi Win32_NetworkAdapterConfiguration -filter "IPEnabled = '$True'" | foreach {$_.DNSDomain}
 # Local DNS Search Suffix
