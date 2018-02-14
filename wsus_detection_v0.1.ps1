@@ -20,7 +20,7 @@ $registryPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate"
 # Reg-Name for WU Server
 $WUServer = "WUServer"
 # Reg-Name for WU Status Server
-$WUStatusServer = "WUStatusServer"
+$WUStatusServer = "http://<server>:8530"
 # Reg-Value for WU Server
 $local_value = "http://<server>:8530"
 # Reg-Value for Remote WU Server
@@ -28,7 +28,7 @@ $remote_value = "https://<server>"
 # Current DNS Search Suffix
 $CurrentDomain = gwmi Win32_NetworkAdapterConfiguration -filter "IPEnabled = '$True'" | foreach {$_.DNSDomain}
 # Local DNS Search Suffix
-$target = "geuder.local"
+$target = "domain.local"
 # Current WSUS Server
 $OldWUServer = Get-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name "WUServer"
 
